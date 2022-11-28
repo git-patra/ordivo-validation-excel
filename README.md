@@ -1,17 +1,21 @@
-# framework and tools
+### framework and tools
 - nestjs
 - xlsx
 - swagger
 
-# lifecycle
+### lifecycle
 main.ts -> app.module -> app.controller -> usecases
 
-# install package
+### install package
 $ yarn install
 
-# running
+### running
 $ npm run start:dev
 
-# url
+### url
 - http://localhost:3000/api/docs (swagger)
 - http://localhost:3000/api/excel (upload file), body { document: binary }
+
+### noted
+- mohon dipastikan value yang didalam excel bukan format tanggal
+- ekskusi bisa dilakukan hanya dengan membuka swagger dan upload file pada api yang di sediakan (api/excel)

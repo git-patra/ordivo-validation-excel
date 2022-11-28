@@ -6,12 +6,13 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileDto } from './dto/file.dto';
-import { ApiBody, ApiConsumes } from '@nestjs/swagger';
+import { ApiBody, ApiConsumes, ApiTags } from '@nestjs/swagger';
 import { ParseExcel } from '../usecases/parse-excel';
 import { getFilePath, StoreFileConfig } from '../usecases/store-file.config';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ValidateExcel } from '../usecases/validate-excel';
 
+@ApiTags('Validation Excel')
 @Controller()
 export class AppController {
   @Post('/excel')
