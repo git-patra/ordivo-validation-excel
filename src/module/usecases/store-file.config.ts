@@ -33,7 +33,12 @@ export const StoreFileConfig: MulterOptions = {
 };
 
 export function getFilePath(file: Express.Multer.File): string {
-  const path = file.path.split('\\');
+  const path =
+    process.env.OS?.includes('Windows') ||
+    process.env?.OS.includes('windows') ||
+    !process.env.OS
+      ? file.path.split('\\')
+      : file.path.split('/');
   path.shift();
   return path.join('/');
 }
