@@ -19,3 +19,4 @@ $ npm run start:dev
 ### noted
 - mohon dipastikan value yang didalam excel bukan format tanggal
 - ekskusi bisa dilakukan hanya dengan membuka swagger dan upload file pada api yang di sediakan (api/excel)
+- belum dinamis penyimpanan file (yang merunning apps harus os windows) atau edit file file.path.split('\\') to file.path.split('/') untuk linux os
